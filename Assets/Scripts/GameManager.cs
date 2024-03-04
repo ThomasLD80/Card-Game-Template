@@ -12,6 +12,11 @@ public class GameManager : MonoBehaviour
     public List<Card> ai_hand = new List<Card>();
     public List<Card> discard_pile = new List<Card>();
 
+
+    public GameObject cardToSpawn;
+    public Card_data cardValues;
+    
+    
     private void Awake()
     {
         if (gm != null && gm != this)
@@ -36,6 +41,18 @@ public class GameManager : MonoBehaviour
         
     }
 
+    void CreateCard()
+    {
+        // Instantiate a card with defined values
+        
+        //GameObject card = Instantiate(cardToSpawn,)
+    }
+
+    void CreateDeck()
+    {
+        
+    }
+    
     void Deal()
     {
 
