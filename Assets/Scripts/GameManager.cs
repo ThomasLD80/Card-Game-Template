@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     public List<Card> ai_hand = new List<Card>();
     public List<Card> discard_pile = new List<Card>();
 
+    public float offset;
+    public Transform canvas;
 
     public GameObject cardToSpawn;
     public Card_data cardValues;
@@ -53,9 +55,18 @@ public class GameManager : MonoBehaviour
         
     }
     
-    void Deal()
+    void Deal(int handSize)
     {
-
+        for (int i = 0; i < handSize; i++)
+        {
+            int cardNumber = Random.Range(0, deck.Count);
+            Card card = Instantiate(deck[cardNumber], new Vector3(0 + offset, 200, 0),
+                Quaternion.identity);
+            player_hand.Add(card);
+            card.transform.SetParent(canvas);
+            deck.RemoveAt(cardNumber);
+            offset += 300;
+        }
     }
 
     void Shuffle()
