@@ -6,6 +6,14 @@ using UnityEngine.UI;
 
 public class Card : MonoBehaviour
 {
+    public Card(string name, string instructions, Sprite image, Color rgb, int integer)
+    {
+        this.card_name = name;
+        this.description = instructions;
+        this.sprite = image;
+        this.color = rgb;
+        this.number = integer;
+    }   
     public Card_data data;
 
     public string card_name;
