@@ -363,14 +363,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deck: []
-  player_deck:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  ai_deck: []
   player_hand: []
   ai_hand: []
   discard_pile: []
+  offset: 0
+  canvas: {fileID: 0}
+  colorList:
+  - {r: 0, g: 0, b: 1, a: 1}
+  - {r: 0, g: 1, b: 0, a: 1}
+  - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   cardToSpawn: {fileID: 0}
   cardValues: {fileID: 0}
 --- !u!4 &622756966

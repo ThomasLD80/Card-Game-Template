@@ -13,7 +13,8 @@ public class Card : MonoBehaviour
         this.sprite = image;
         this.color = rgb;
         this.number = integer;
-    }   
+    }
+    
     public Card_data data;
 
     public string card_name;

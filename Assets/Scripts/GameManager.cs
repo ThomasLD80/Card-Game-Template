@@ -35,18 +35,24 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        colorList[0] = new Color(0, 0, 1, 1);
-        colorList[1] = new Color(0, 1, 0, 1);
-        colorList[2] = new Color(1, 0, 0, 1);
-        colorList[3] = new Color(1, 0.92f, 0.016f, 1);
+        Debug.Log("start happened");
+        
+        //colorList[0] = new Color(0, 0, 1, 1);
+        //colorList[1] = new Color(0, 1, 0, 1);
+        //colorList[2] = new Color(1, 0, 0, 1);
+        //colorList[3] = new Color(1, 0.92f, 0.016f, 1);
 
         for (int number = 0; number < 10; number++)
         {
+            Debug.Log("number: " + number);
             for (int colorIndex = 0; colorIndex < 4; colorIndex++)
             {
-                deck.Add(new Card(null, null, null, colorList[colorIndex], number));
+                Debug.Log("colorIndex: " + colorIndex);
+                deck.Add(new Card("Card", "Description", null, colorList[colorIndex], number));
             }
         }
+        
+        Debug.Log(deck[7]);
         
         Deal(7);
     }
